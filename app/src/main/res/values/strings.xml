@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">工作日历</string>
+    <string name="change_year">更改年份</string>
+    <string name="back_to_today">返回今天</string>
+    <string name="NO_SETTING">无配置</string>
+    <string name="NO_CONTENT">无内容，您可以点击此处添加备忘录</string>
+    <string name="msg_quick_setting">快速配置</string>
+    <string name="msg_force_setting">使用之前，请先配置工作设置以保证程序的正常运行</string>
 </resources>

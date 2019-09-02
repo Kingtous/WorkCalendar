@@ -9,32 +9,183 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height" />
+
     <com.qmuiteam.qmui.layout.QMUILinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/app_content_bg_color"
+        android:layout_alignParentStart="true"
+        android:background="@color/shadow_white"
         android:orientation="vertical">
 
-        <com.qmuiteam.qmui.widget.QMUITopBar
-            android:id="@+id/topbar"
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+            android:id="@+id/ll_calendar_pannel"
             android:layout_width="match_parent"
-            android:layout_height="?attr/qmui_topbar_height" />
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin"
+            android:orientation="vertical"
+            app:qmui_radius="8dp"
+            app:qmui_backgroundColor="@color/qmui_config_color_white"
+            android:elevation="4dp"
+            >
 
-        <com.haibin.calendarview.CalendarLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
 
-            <com.haibin.calendarview.CalendarView
-                android:id="@+id/calendar"
+                <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+                    android:id="@+id/msg_main_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/qmui_config_color_pure_black"
+                    android:textSize="@dimen/font_a_little_big" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/btn_back_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:width="80dp"
+                    android:text="@string/back_to_today" />
+
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                    android:id="@+id/btn_change_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:width="80dp"
+                    android:text="@string/change_year" />
+
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundFrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                app:qmui_radius="@dimen/qmui_dialog_radius">
 
-        </com.haibin.calendarview.CalendarLayout>
+                <com.haibin.calendarview.CalendarLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.haibin.calendarview.CalendarView
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:current_month_lunar_text_color="#CFCFCF"
+                        app:current_month_text_color="#333333"
+                        app:max_year="2101"
+                        app:min_year="2000"
+                        app:month_view="com.kingtous.workcalendar.views.mMonthView"
+                        app:week_view="com.kingtous.workcalendar.views.mWeekView"
+                        app:other_month_lunar_text_color="#e1e1e1"
+                        app:other_month_text_color="#e1e1e1"
+                        app:scheme_text="假"
+                        app:scheme_text_color="#333"
+                        app:scheme_theme_color="#128c4b"
+                        app:selected_lunar_text_color="#CFCFCF"
+                        app:selected_text_color="#333"
+                        app:selected_theme_color="#108cd4"
+                        app:week_background="#fff"
+                        app:week_text_color="#111"
+                        app:year_view_day_text_color="#333333"
+                        app:year_view_day_text_size="9sp"
+                        app:year_view_month_text_color="#ff0000"
+                        app:year_view_month_text_size="20sp"
+                        app:year_view_scheme_color="#f17706" />
+                </com.haibin.calendarview.CalendarLayout>
+
+
+            </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundFrameLayout>
+
+
+
+
+
+
+        </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+
+
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:qmui_backgroundColor="@color/qmui_config_color_white"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        app:qmui_radius="8dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        >
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:layout_margin="@dimen/common_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_a_little_big"
+            android:gravity="center"
+            android:text="工作"
+            />
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:id="@+id/msgWorkStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:gravity="center"
+            android:text="无" />
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qmui_backgroundColor="@color/qmui_config_color_white"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        app:qmui_radius="8dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        >
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:layout_margin="@dimen/common_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_a_little_big"
+            android:text="备忘录"
+            android:gravity="center"
+            />
+
+        <com.qmuiteam.qmui.alpha.QMUIAlphaTextView
+            android:id="@+id/msg_sticky_notes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:gravity="center"
+            android:text="无内容，您可以点击此处添加备忘录。" />
+
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
 
     </com.qmuiteam.qmui.layout.QMUILinearLayout>
-
-
 
 
 </com.qmuiteam.qmui.layout.QMUILinearLayout>
