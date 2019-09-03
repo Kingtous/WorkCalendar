@@ -86,7 +86,7 @@ public class MainActivity extends BaseActivity {
         super.initView();
         initTopBar(getString(R.string.app_name));
         topbar.addRightTextButton("重新设置", CodeDef.SETTINGS);
-        btn_setting = findViewById(CodeDef.SETTINGS);
+        btn_setting = (Button) findViewById(CodeDef.SETTINGS);
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,7 +21,7 @@ public class BaseActivity extends QMUIActivity {
     }
 
     protected void initView(){
-        mTopBar = findViewById(R.id.topbar);
+        mTopBar = (QMUITopBar) findViewById(R.id.topbar);
     }
 
     protected void initTopBar(String title) {
