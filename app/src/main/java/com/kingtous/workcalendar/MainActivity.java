@@ -162,7 +162,7 @@ public class MainActivity extends BaseActivity {
 
     void querySunWorkTime(){
         final QMUIDialog.CheckableDialogBuilder builder=new QMUIDialog.CheckableDialogBuilder(this);
-        builder.setTitle("任选本月上白班的日子");
+        builder.setTitle("任选本月上班的日子");
         int maxdays=TimeUtil.getMonthOfDay(calendar.getCurYear(),calendar.getCurMonth());
         ArrayList<String> day_index=new ArrayList<>();
         for (int i=1;i<=maxdays;i++){

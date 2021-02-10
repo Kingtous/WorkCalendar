@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">工作日历</string>
+    <string name="app_name">工作日历(3班版)</string>
     <string name="change_year">更改年份</string>
     <string name="back_to_today">返回今天</string>
     <string name="NO_SETTING">无配置</string>

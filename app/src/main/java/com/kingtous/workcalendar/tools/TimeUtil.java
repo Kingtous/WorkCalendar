@@ -43,7 +43,7 @@ import java.util.Date;
 
 public class TimeUtil {
 
-    private static String[] workStatus={"白班","晚班","下早班","休息"};
+    private static String[] workStatus={"上班","下班","休息"};
     /**
      * 获取今天的工作情况：休息、晚班、白班
      * 传入 1999-08-14 即可
@@ -64,18 +64,18 @@ public class TimeUtil {
             long between = (nowdate.getTime()-former_date.getTime())/86400000; //86400000代表一天，以ms为单位
             if (between > 0){
                 // 白班、晚班、休息、休息
-                between = (int)(between % 4);
+                between = (int)(between % 3);
                 return workStatus[(int) between];
             }
             else if (between < 0){
                 between = - between;
-                between = (int)(between % 4) - 1;
+                between = (int)(between % 3) - 1;
                 if (between == -1){
                     // 循环至workstatus[0]
                     return workStatus[0];
                 }
                 else
-                return workStatus[(int) (3-between)];
+                return workStatus[(int) (2-between)];
             }
             else {
                 return workStatus[0];

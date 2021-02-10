@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.kingtous.workcalendar.R;
+import com.stephentuso.welcome.BackgroundColor;
 import com.stephentuso.welcome.TitlePage;
 import com.stephentuso.welcome.WelcomeActivity;
 import com.stephentuso.welcome.WelcomeConfiguration;
@@ -14,7 +15,7 @@ public class mWelcomeActivity extends WelcomeActivity {
     @Override
     protected WelcomeConfiguration configuration() {
         return new WelcomeConfiguration.Builder(this)
-                .defaultBackgroundColor(R.color.app_color_blue)
+                .defaultBackgroundColor(R.color.app_primary_color)
                 .page(new TitlePage(R.drawable.welcome_screen,
                         "工作日历")
                 )

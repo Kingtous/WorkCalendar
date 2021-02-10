@@ -17,6 +17,7 @@
 
 <resources>
     <!-- common -->
+    <color name="app_primary_color">#f3c067</color>
     <color name="app_color_blue">#00A8E1</color>
     <color name="app_color_blue_disabled">#8000A8E1</color>
     <color name="app_color_blue_pressed">#c000A8E1</color>
